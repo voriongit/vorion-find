@@ -12,3 +12,4 @@ npm-debug.log*
 *.tsbuildinfo
 coverage/
 .nyc_output/
+builds/

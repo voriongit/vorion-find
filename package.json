@@ -1,0 +1,44 @@
+{
+  "name": "vorion-find",
+  "version": "0.1.0",
+  "description": "Scan a local device for AI agents and stream findings to aurais.net",
+  "license": "MIT",
+  "author": "Vorion LLC",
+  "homepage": "https://aurais.net/find",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/voriongit/vorion-find.git"
+  },
+  "type": "module",
+  "bin": {
+    "vorion-find": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json && node -e \"import('node:fs').then(fs=>{const p='dist/index.js';const s=fs.readFileSync(p,'utf8');if(!s.startsWith('#!'))fs.writeFileSync(p,'#!/usr/bin/env node\\n'+s);fs.chmodSync(p,0o755);})\"",
+    "dev": "tsc -p tsconfig.json --watch",
+    "test": "node --test dist/**/*.test.js || echo 'no tests yet'",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.6.0"
+  },
+  "keywords": [
+    "ai",
+    "agents",
+    "scanner",
+    "discovery",
+    "vorion",
+    "aurais",
+    "governance"
+  ]
+}

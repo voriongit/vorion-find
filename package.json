@@ -2,7 +2,7 @@
   "name": "vorion-find",
   "version": "0.1.0",
   "description": "Scan a local device for AI agents and stream findings to aurais.net",
-  "license": "MIT",
+  "license": "SEE LICENSE IN LICENSE",
   "author": "Vorion LLC",
   "homepage": "https://aurais.net/find",
   "repository": {
